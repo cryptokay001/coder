@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport" />
+        <title>contact us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap">
+        <style>
+            /* CONTACT SECTION */
+            .mynavbar{
+                display: inline-flex;
+                justify-content: space-between;
+                /* background-color: #E9F1FA;  */
+                /* background-image: url(images/pexels-vedanti-245250.jpg); */
+                background-color: black;
+                width: 100%;
+                padding-top: 10px;
+                height: 60px;
+                border-bottom: #ccc 1px solid;
+            }
+            #action-menu{
+                display: none;
+                color: white;
+                margin-right: 5px;
+            }
+            .nav-list{
+            
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                width: 35%;
+                /* align-items: center; */
+                /* align-self: center; */
+                position: relative;
+                right: 10px;
+                /* border: red 3px solid; */
+                margin-top: 8px;
+                /* flex-direction: column; */
+                /* border-bottom: #ccc 3px solid; */
+            }
+            ul>li{
+                flex: 1;
+            }
+            .nav-list a{
+                align-self: center;
+                text-decoration: none;
+            }
+            .logo{
+                /* color: #1e375a; */
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                padding-left: 10px;
+            }
+            .logo>.bluefill{
+                font-size: 2rem; 
+            }
+            .bluefill{
+                color: blue;
+                /* font-size: 2rem; */
+            }
+            li>a{
+                
+                /* color: #1e375a; */
+                color: white;
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            #subscribe-button{
+                font-size: 1.2rem;
+                background-color:blue;
+                /* padding: 5px; */
+                /* padding: 0px 5px; */
+                padding: 5px 10px; 
+                /* padding-bottom: 5px; */
+                height: 28px;
+                border-radius: 10px;
+                margin-right: 10px;
+                color: white;
+                margin-top: 7px; 
+                /* text-align: center; */
+                line-height: 15px;
+                font-weight: bold;
+
+            }
+            .contact-page{
+                margin-top: 60px;
+                height: 100vh;
+
+            }
+            .form-container{
+                display: flex;
+                gap: 40px;
+                justify-content: space-around;
+                
+
+            }
+            .contact-container{
+                display: flex;
+                gap: 10px;
+                
+
+            }
+            .form-title{
+                align-self: center;
+            }
+            .form-title>p{
+                font-size: 2rem;
+                font-weight: bolder;
+                margin-left: 0;
+            }
+            /* .form-group{
+                margin: 0;
+            } */
+            .bottom-form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #9E9FA5;
+            }
+            .form-control{
+                width: 100%;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 14px;
+                border: none;
+            }
+            .short{
+                height: 25px;
+            }
+            .bluefill{
+                color: blue;
+            }
+
+            .contact-box{
+                background-color: #9E9FA5;
+                padding: 10px;
+            }
+            .contact-box>svg{
+                height: 30px;
+                background-color: #61677A;
+                margin-left: 5px;
+                padding: 5px;
+            }
+            .contact-box>h4,p{
+                margin-left: 5px;
+            }
+
+            #outer-form{
+                background-color: #9E9FA5;
+                padding: 20px;
+                border-radius: 10px;
+                
+                width: 600px;
+            }
+            .contact-page>h1{
+                color: blue;
+                /* margin: 0; */
+                font-size: 2rem;
+                text-align: center;
+                margin: 70px;
+
+            }
+            #buttton-contactsend{
+                position: relative;
+            }
+            .contact-submit{
+                width: 80px;
+                height: 35px;
+                position: relative;
+                /* left: 480px; */
+                font-size: 18px;
+                border-radius: 10px;
+                border: none;
+            }
+            .bottom-column{
+                display: flex;
+                justify-content: space-around;
+            }
+            .bottom-end{
+                background-color: black;
+                width: 100%;
+                margin-top: 40px;
+                padding: 20px;
+            }
+            .bottom-column *{
+                color: white;
+            }
+            .footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 10px;
+                background-color: black;
+                width: 100%;
+                
+            }
+            .copyright{
+                color: white;
+            }
+            .socials{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+            }
+
+            .socials {
+                cursor: pointer;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+            .fa-linkedin{
+                color: white;
+            }
+            /* .fa-brands{
+                font-size: 5px;
+                height: 10px;
+            }
+            .socials>a{
+                font-size: 5px;
+                height: 10px;
+            } */
+            .svg{
+                
+            
+                text-align: center;
+            }
+            .svg>svg{
+                margin-bottom: 20px;
+            }
+            @media  (max-width: 750px) {
+                .mynavbar{
+                    position: relative;
+                    top: 0;
+                    border-bottom: black 1px solid;
+                    position: fixed;
+                    margin-bottom: 50px;
+                }
+                
+                #btn-back-to-top,#subscribe-button{
+                display: none;
+                }
+                #newSubscribe-button{
+                    display: block;
+                    padding-bottom: 10px;
+                }
+                #action-menu {
+                    position: absolute;
+                    right: 10px;
+                    /* position: fixed;
+                    top: 10px;
+                    right: 10px; */
+                    width: 100%;
+                    padding: 10px 4px 10px 4px;
+                    /* background-color: silver;  */
+                    cursor: pointer;
+                    display: block;
+                }
+                .fa-bars{
+                    position: absolute;
+                    right: 10px;
+                }
+                .nav-list {
+                    width: 100%;
+                    position: absolute;
+                    top: 50px;
+                    left: 10px; 
+                    border:0.1px solid #ccc;
+                    /* padding-left: 10px; */
+                    overflow: hidden;
+                    height: 0px;
+                    /* background-color: red;  */
+                    flex-direction: column;
+                    align-self: flex-start;
+                    /* flex-basis: 100px;  */
+                    gap: 10px; 
+                    background-color: black; 
+                    justify-content: space-around;
+                    
+                }
+                .nav-list *{
+                    
+                    height: 20px;
+                    color: #ccc;
+                    
+                }
+                .nav-list li{
+                    background-color: black;
+                    /* border:1px solid red; */
+                }
+                .content .h1{
+                    
+                    font-size: 2.5rem;
+                }
+                .slideOpen {
+                    animation: slideOpen 1s forwards;
+                    padding-left: 10px;
+                    padding-top: 2px;
+                    padding-bottom: 10px;
+                    
+                }
+                .slideShut{
+                    animation: slideShut 1s forwards;
+                    padding-left: 10px;
+                }
+                @keyframes slideOpen {
+                    0% { height: 0px; }
+                    100% { height: 150px; }
+                }
+                @keyframes slideShut {
+                    0% { height: 150px; }
+                    100% { height: 0px; }
+                }  
+                .contact-page{
+                    margin-top: 100px;
+                   
+                }  
+                .form-container{
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 50px;
+                    margin-left: 15px;
+                    
+                
+                }
+                .form-title{
+                    align-self: flex-start;
+                }
+                .contact-container{
+                    gap: 5px;
+                }
+                #outer-form{
+                    width: 98%;
+                }
+                .form-control{
+                width: 100%;
+                }
+                .bottom-column{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .footer {
+                    
+                    flex-direction: column;
+                    align-items: center;
+                    
+                }
+                
+
+
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <nav class="mynavbar">
+            <h2 class="logo">Portfo<span class="bluefill">lio</span></h2>
+            <div id="action-menu">
+                <i class='fas fa-bars' style='font-size:24px'></i>
+            </div> 
+            <ul class="nav-list">
+                <li><a href="./index.html" style="text-decoration: none;">Home</a></li>
+                <li><a href="./about.html" style="text-decoration: none;">About</a></li>
+                <li><a href="./portfolio.html" style="text-decoration: none;">Portfolio</a></li>
+                <li><a href="#Contact" style="text-decoration: none;">Contact </a></li>
+
+            </ul>
+            <a id="subscribe-button" href="subscribe.html"  style="text-decoration: none;">Subscribe</a>
+        </nav>
+        <section class="contact-page">
+            
+            <div class="form">
+                <div class="form-container">
+                    <div class="form-title">
+                        <p>Get In <span class="bluefill">Touch</span></p>
+                        <h3>Lets create something <span class="bluefill">awesome</span></h3>
+                        <div class="contact-container">
+                            <div class="contact-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                                </svg>
+                                <h4>Email address</h4>
+                                <p>kayodeakeem001@gmail.com</p>
+                            </div>
+                            <div class="contact-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.450l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.580-.122l-2.190.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.460-1.657l.548-2.190a.678.678 0 0 0-.122-.580L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.190a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.740.740-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                                </svg>
+                                <h4>Contact Number</h4>
+                                <p>+234 8140877123</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+        
+                    <div id="outer-form">
+                        <form class="bottom-form" action="http://formspree.io/kayodeakeem001@gmail.com" method="POST">
+                            <div class="form-group">
+                                <!-- <label for="name">Name:</label> -->
+                                <input type="text" class="form-control short" name="full_name" placeholder="Full Name" required=""></div>
+                            <div class="form-group">
+                                <!-- <label for="email">Email:</label> -->
+                                <input type="email" class="form-control short" name="user_email" placeholder="Email Address" required=""></div>
+                            <div class="form-group">
+                                <!-- <label for="subject">Subject:</label> -->
+                                <input type="text" class="form-control short" name="subject" placeholder="Subject" required=""></div>
+                            <div class="form-group">
+                                <!-- <label for="message">Message:</label> -->
+                                <textarea class="form-control tall" name="message" rows="10" placeholder="Write message"></textarea></div>
+                                <div id="button-contactsend">
+                                    <button type="submit" class="contact-submit">Send</button>
+                                </div> 
+                        </form>
+                        
+                    </div>   
+                    
+                </div>
+                
+            </div>
+            
+            <div class="bottom-end">
+                
+                <div class="bottom-column">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path></svg>
+                        <h5>WHERE TO FIND ME</h5>
+                        <p> Nigeria</p>
+                    </div>
+                    
+                    
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                          </svg>
+                        <h5>EMAIL ME AT</h5>
+                        <p>kayodeakeem001@gmail.com</p>
+                    </div>
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.450l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.580-.122l-2.190.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.460-1.657l.548-2.190a.678.678 0 0 0-.122-.580L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.190a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.740.740-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                        </svg>
+                        <h5>CALL ME AT</h5>
+                        <p>Phone:(+234) 8140877123</p>
+        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer ">
+                <div class="copyright">
+                    <p><a href="./index.html" style="text-decoration: none;"><span class="bluefill">Copyright ©2024 All rights reserved</span></a> | CryptoKay</p>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/cryptokay001"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/keemDread"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="http://linkedin.com/in/akeem-kayode-8a9226265"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+        <script>
+            const contactButton = document.querySelector('.contact-submit');
+            contactButton.addEventListener('mouseenter',hoverIn);
+            contactButton.addEventListener('mouseout',hoverOut);
+
+            const subscribe = document.getElementById("subscribe-button");
+            
+            subscribe.addEventListener("mouseenter",hoverIn);
+            subscribe.addEventListener("mouseout",hoverOut);
+
+            function hoverIn(e){
+                e.target.style.backgroundColor='#1e375a';
+                e.target.style.color='white';
+
+            }
+            function hoverOut(e){
+                e.target.style.backgroundColor='blue';
+            
+            }
+            var actionMenu = document.getElementById( "action-menu" );
+            var isOpen = false;
+
+            actionMenu.addEventListener( "click", function () {
+            if ( isOpen ) {
+                document.querySelector( ".nav-list" ).className = "nav-list slideShut";
+                isOpen = false;
+
+            }
+            else {
+                if (document.querySelector( ".nav-list" ).lastElementChild.firstElementChild.getAttribute("href")==="./contact.html"){
+                const div = document.createElement("li");
+                div.innerHTML = '<a id="newSubscribe-button" href="subscribe.html"  style="text-decoration: none;">Subscribe</a>';
+                document.querySelector(".nav-list").appendChild(div);
+                // mybutton.remove();
+            
+                }
+                document.querySelector(".nav-list").className = "nav-list slideOpen";
+                isOpen = true;
+
+            }
+
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Portfolio website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        
+        <style>
+            .mynavbar{
+                display: flex;
+                justify-content: space-between;
+                /* background-color: #E9F1FA;  */
+                /* background-image: url(images/pexels-vedanti-245250.jpg); */
+                background-color: black;
+                width: 100%;
+                padding-top: 10px;
+                height: 60px;
+                border-bottom: #ccc 1px solid;
+                
+            }
+            #action-menu{
+                display: none;
+                /* color: white; */
+                margin-right: 5px;
+            }
+
+            .nav-list{
+            
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                width: 35%;
+                /* align-items: center; */
+                /* align-self: center; */
+                position: relative;
+                right: 10px;
+                /* border: red 3px solid; */
+                margin-top: 8px;
+                /* flex-direction: column; */
+                /* border-bottom: #ccc 3px solid; */
+            }
+            ul>li{
+                flex: 1;
+            }
+            .nav-list a{
+                align-self: center;
+                text-decoration: none;
+            }
+            .logo{
+                /* color: #1e375a; */
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                padding-left: 10px;
+                align-self: center;
+            }
+            .logo>.bluefill{
+                font-size: 2rem; 
+            }
+            .bluefill{
+                color: blue;
+                /* font-size: 2rem; */
+            }
+            li:hover{
+                    color: blue;
+                }
+            li>a{
+                
+                /* color: #1e375a; */
+                color: white;
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            #subscribe-button{
+                font-size: 1.2rem;
+                background-color:blue;
+                /* padding: 5px; */
+                /* padding: 0px 5px; */
+                padding: 5px 10px; 
+                /* padding-bottom: 5px; */
+                height: 28px;
+                border-radius: 10px;
+                margin-right: 10px;
+                color: white;
+                margin-top: 7px; 
+                /* text-align: center; */
+                line-height: 15px;
+                font-weight: bold;
+
+            }
+            *{box-sizing: border-box}
+
+            
+            input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            }
+
+            input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+            }
+
+            hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+            }
+
+            button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            /* opacity: 0.9; */
+            }
+
+            button:hover {
+            opacity:1;
+            }
+
+            
+            .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+            }
+
+            
+            .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+            }
+
+            
+            .container {
+            padding: 16px;
+            }
+
+            
+            .links::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+
+            li:hover,
+                li:hover a {
+                color: #0088cc;
+                }
+
+            
+            @media (max-width: 750px) {
+            .cancelbtn, .signupbtn {
+                width: 100%;
+            }
+            .mynavbar{
+                    position: relative;
+                    top: 0;
+                    border-bottom: black 1px solid;
+                    position: fixed;
+                    margin-bottom: 50px;
+                }
+                
+                #btn-back-to-top,#subscribe-button{
+                display: none;
+                }
+                #newSubscribe-button{
+                    display: block;
+                    padding-bottom: 10px;
+                }
+                #action-menu {
+                    position: absolute;
+                    right: 10px;
+                    /* position: fixed;
+                    top: 10px;
+                    right: 10px; */
+                    width: 100%;
+                    padding: 10px 4px 10px 4px;
+                    /* background-color: silver;  */
+                 
+                    cursor: pointer;
+                    display: block;
+                }
+                .fa-bars{
+                    position: absolute;
+                    right: 10px;
+                    color: white;
+                }
+                .nav-list {
+                    width: 100%;
+                    position: absolute;
+                    top: 50px;
+                    left: 10px; 
+                    border:0.1px solid #ccc;
+                    /* padding-left: 10px; */
+                    overflow: hidden;
+                    height: 0px;
+                    /* background-color: red;  */
+                    flex-direction: column;
+                    align-self: flex-start;
+                    /* flex-basis: 100px;  */
+                    gap: 10px; 
+                    background-color: black; 
+                    justify-content: space-around;
+                    
+                }
+                .nav-list *{
+                    
+                    height: 20px;
+                    color: #ccc;
+                    
+                }
+                .nav-list li{
+                    background-color: black;
+                    /* border:1px solid red; */
+                }
+                .container{
+                    margin-top: 20px;
+                }
+                .content .h1{
+                    
+                    font-size: 2.5rem;
+                }
+                .slideOpen {
+                    animation: slideOpen 0.1s forwards;
+                    padding-left: 10px;
+                    padding-top: 2px;
+                    padding-bottom: 10px;
+                    
+                }
+                .slideShut{
+                    animation: slideShut 0.1s forwards;
+                    padding-left: 10px;
+                }
+                @keyframes slideOpen {
+                    0% { height: 0px; }
+                    100% { height: 150px; }
+                }
+                @keyframes slideShut {
+                    0% { height: 150px; }
+                    100% { height: 0px; }
+                }  
+                form{
+                    margin-top: 50px;
+                }
+                .bottom-column{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .footer {
+                    
+                    flex-direction: column;
+                    align-items: center;
+                    
+                }
+                
+                
+
+              
+            
+                    
+            }           
+        </style
+    </head>
+    <body>
+        <nav class="mynavbar">
+            <h2 class="logo">Portfo<span class="bluefill">lio</span></h2>
+            <div id="action-menu">
+                <i class='fas fa-bars' style='font-size:24px'></i>
+            </div> 
+            <ul class="nav-list">
+                <li><a href="./index.html" style="text-decoration: none;">Home</a></li>
+                <li><a href="./about.html" style="text-decoration: none;">About</a></li>
+                <li><a href="./portfolio.html" style="text-decoration: none;">Portfolio</a></li>
+                <li><a href="./contact.html" style="text-decoration: none;">Contact </a></li>
+
+            </ul>
+            <a id="subscribe-button" href="#Subscribe"  style="text-decoration: none;">Subscribe</a>
+        </nav>
+        <form action="" style="border:1px solid #ccc">
+            
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account for our <span class="bluefill"> newsletter</span></p>
+                <hr>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+            
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            
+                <div class="links">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+        <div class="bottom-end">
+                
+            <div class="bottom-column">
+                <div class="svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path></svg>
+                    <h5>WHERE TO FIND ME</h5>
+                    <p> Nigeria</p>
+                </div>
+                
+                
+                <div class="svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                          </svg>
+                    <h5>EMAIL ME AT</h5>
+                    <p>kayodeakeem001@gmail.com</p>
+                </div>
+                <div class="svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.450l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.580-.122l-2.190.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.460-1.657l.548-2.190a.678.678 0 0 0-.122-.580L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.190a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.740.740-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                    </svg>
+                    <h5>CALL ME AT</h5>
+                    <p>Phone:(+234) 8140877123</p>
+
+                </div>
+            </div>
+        </div>  
+        <div class="footer ">
+            <div class="copyright">
+                <p><a href="./index.html" style="text-decoration: none;"><span class="bluefill">Copyright ©2024 All rights reserved</span></a> | CryptoKay</p>
+            </div>
+            <div class="socials">
+                <a href="https://github.com/cryptokay001"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/keemDread"><i class="fa-brands fa-twitter"></i></a>
+                <a href="http://linkedin.com/in/akeem-kayode-8a9226265"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        
+                
+        <script>
+            
+            var actionMenu = document.getElementById( "action-menu" );
+            var isOpen = false;
+
+            actionMenu.addEventListener( "click", function () {
+                if ( isOpen ) {
+                    document.querySelector( ".nav-list" ).className = "nav-list slideShut";
+                    isOpen = false;
+
+                }
+                else {
+                    if (document.querySelector( ".nav-list" ).lastElementChild.firstElementChild.getAttribute("href")==="./contact.html"){
+                        const div = document.createElement("li");
+                        div.innerHTML = '<a id="newSubscribe-button" href="subscribe.html"  style="text-decoration: none;">Subscribe</a>';
+                        document.querySelector(".nav-list").appendChild(div);
+                        // mybutton.remove();
+                
+                    }
+                    document.querySelector(".nav-list").className = "nav-list slideOpen";
+                    isOpen = true;
+                }
+
+            });
+
+            const subscribe = document.getElementById("subscribe-button");
+            
+            subscribe.addEventListener("mouseenter",hoverIn);
+            subscribe.addEventListener("mouseout",hoverOut);
+
+
+            function hoverIn(e){
+                    
+                    
+                e.target.style.backgroundColor='#1e375a';
+                e.target.style.color='white';
+                    
+            }
+
+            function hoverOut(e){
+                e.target.style.backgroundColor='blue'; 
+            }
+
+        </script>
+    </body>
+   
+</html>
